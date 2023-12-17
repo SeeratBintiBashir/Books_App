@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/green"
+            android:textSize="18sp"
+            android:textAllCaps="true"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/authorTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Author"
+            android:layout_below="@+id/titleTextView"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/green"
+            android:textSize="18sp"
+            android:textStyle="italic"/>
+
+        <TextView
+            android:id="@+id/dateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Publish Date"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/green"
+            android:layout_below="@+id/authorTextView"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/isbnTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ISBN"
+            android:layout_below="@+id/dateTextView"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/green"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/updateButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/baseline_edit_24"
+            android:layout_marginEnd="30dp"/>
+
+        <ImageView
+            android:id="@+id/deleteButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/baseline_delete_24"
+            />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

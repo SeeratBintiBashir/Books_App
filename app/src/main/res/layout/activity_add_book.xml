@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".AddBookActivity">
+
+    <TextView
+        android:id="@+id/addBook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins"
+        android:text="Add Book"
+        android:textColor="@color/green"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/addBook"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="6dp"
+        android:src="@drawable/baseline_done_24" />
+
+
+    <EditText
+        android:id="@+id/bookTitle"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins"
+        android:layout_below="@+id/addBook"
+        android:hint="Enter The Title"
+        android:padding="12dp"
+        android:maxLines="3"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/bookAuthor"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins"
+        android:layout_below="@+id/bookTitle"
+        android:hint="Enter The Author"
+        android:padding="12dp"
+        android:maxLines="3"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/bookPublishDate"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins"
+        android:layout_below="@+id/bookAuthor"
+        android:hint="Enter The Publish Date"
+        android:padding="12dp"
+        android:maxLines="3"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/bookISBN"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins"
+        android:layout_below="@+id/bookPublishDate"
+        android:hint="Enter The ISBN"
+        android:padding="12dp"
+        android:maxLines="3"
+        android:textSize="20sp" />
+
+</RelativeLayout>
