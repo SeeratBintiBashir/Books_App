@@ -1,9 +1,10 @@
-package com.google.books_app
+package com.google.books_app.database
 
 import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import com.google.books_app.database.models.Book
 
 class BooksDatabaseHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION){
 
@@ -79,7 +80,7 @@ class BooksDatabaseHelper(context: Context): SQLiteOpenHelper(context, DATABASE_
     }
 
 
-    fun getBookById(bookId: Int): Book{
+    fun getBookById(bookId: Int): Book {
         val db = readableDatabase
         val query = "SELECT * FROM $TABLE_NAME WHERE $COLUMN_ID = $bookId"
         val cursor = db.rawQuery(query, null)
@@ -103,5 +104,6 @@ class BooksDatabaseHelper(context: Context): SQLiteOpenHelper(context, DATABASE_
         db.delete(TABLE_NAME, whereClause, whereArgs)
         db.close()
     }
+
 
 }

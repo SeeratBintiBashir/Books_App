@@ -13,13 +13,13 @@
         android:theme="@style/Theme.Books_App"
         tools:targetApi="31">
         <activity
-            android:name=".UpdateBookActivity"
+            android:name=".ui.update.UpdateBookActivity"
             android:exported="false" />
         <activity
-            android:name=".AddBookActivity"
+            android:name=".ui.add.AddBookActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.main.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

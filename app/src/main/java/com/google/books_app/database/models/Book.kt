@@ -1,4 +1,4 @@
-package com.google.books_app
+package com.google.books_app.database.models
 
 import java.util.Date
 

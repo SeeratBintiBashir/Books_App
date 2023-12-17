@@ -1,13 +1,13 @@
-package com.google.books_app
+package com.google.books_app.ui.update
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.google.books_app.database.BooksDatabaseHelper
 import com.google.books_app.databinding.ActivityUpdateBookBinding
+import com.google.books_app.database.models.Book
 
 class UpdateBookActivity : AppCompatActivity() {
-
-
     private lateinit var binding: ActivityUpdateBookBinding
     private lateinit var db: BooksDatabaseHelper
     private var bookId: Int = -1
@@ -18,6 +18,7 @@ class UpdateBookActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         db = BooksDatabaseHelper(this)
+
 
         bookId = intent.getIntExtra("book_id", -1)
         if (bookId == -1) {

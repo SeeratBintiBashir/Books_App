@@ -1,4 +1,4 @@
-package com.google.books_app
+package com.google.books_app.ui.main
 
 import android.content.Context
 import android.content.Intent
@@ -9,8 +9,12 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.google.books_app.R
+import com.google.books_app.database.BooksDatabaseHelper
+import com.google.books_app.database.models.Book
+import com.google.books_app.ui.update.UpdateBookActivity
 
-class BooksAdapter(private var books: List<Book>, context: Context):
+class BooksAdapter(private var books: List<Book>, val context: Context):
     RecyclerView.Adapter<BooksAdapter.BookViewHolder>() {
 
     private val db: BooksDatabaseHelper = BooksDatabaseHelper(context)
@@ -42,10 +46,10 @@ class BooksAdapter(private var books: List<Book>, context: Context):
         holder.isbn.text = book.ISBN
 
         holder.updateButton.setOnClickListener {
-            val intent = Intent(holder.itemView.context, UpdateBookActivity::class.java).apply {
-                putExtra("note_id", book.id)
+            val intent = Intent(context, UpdateBookActivity::class.java).apply {
+                putExtra("book_id", book.id)
             }
-            holder.itemView.context.startActivity(intent)
+          context.startActivity(intent)
         }
 
         holder.deleteButton.setOnClickListener{

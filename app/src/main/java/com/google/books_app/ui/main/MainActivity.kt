@@ -1,10 +1,12 @@
-package com.google.books_app
+package com.google.books_app.ui.main
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.books_app.database.BooksDatabaseHelper
 import com.google.books_app.databinding.ActivityMainBinding
+import com.google.books_app.ui.add.AddBookActivity
 
 class MainActivity : AppCompatActivity() {
 

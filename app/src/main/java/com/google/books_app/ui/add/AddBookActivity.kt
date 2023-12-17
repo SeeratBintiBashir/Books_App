@@ -1,13 +1,15 @@
-package com.google.books_app
+package com.google.books_app.ui.add
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.google.books_app.database.BooksDatabaseHelper
 import com.google.books_app.databinding.ActivityAddBookBinding
+import com.google.books_app.database.models.Book
 
 class AddBookActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAddBookBinding
-    private lateinit var db:BooksDatabaseHelper
+    private lateinit var db: BooksDatabaseHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
